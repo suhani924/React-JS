@@ -1,0 +1,328 @@
+/* ================= ROOT ================= */
+:root {
+  --primary: #38bdf8;
+  --primary-dark: #0ea5e9;
+  --danger: #ef4444;
+  --success: #22c55e;
+
+  --bg-main: #020617;
+  --bg-soft: #0b1220;
+  --glass: rgba(255, 255, 255, 0.06);
+
+  --card-light: #eef2ff;
+  --text-dark: #020617;
+
+  font-family: "Poppins", system-ui, sans-serif;
+  color-scheme: dark;
+  color: #e5e7eb;
+}
+
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0b1220 0%, #020617 60%);
+}
+
+/* ================= LINKS ================= */
+a {
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* ================= HEADINGS ================= */
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+/* ================= NAV ================= */
+nav {
+  display: flex;
+  gap: 30px;
+  padding: 18px 32px;
+  background: rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+nav a {
+  font-size: 18px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 1280px;
+  margin: 70px auto;
+  padding: 40px;
+  background: linear-gradient(180deg, #020617, #020617);
+  border-radius: 24px;
+  box-shadow: 0 45px 80px rgba(0, 0, 0, 0.75);
+}
+
+/* ================= TITLE ================= */
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary);
+}
+
+/* ================= FORM (GRID) ================= */
+.form {
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  padding: 36px;
+  background: linear-gradient(180deg, #9ec5ff, #7aa7ff);
+  color: var(--text-dark);
+  border-radius: 28px;
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.45);
+}
+
+.full {
+  grid-column: span 2;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.field label {
+  font-size: 18px;
+  margin-bottom: 6px;
+  margin-left: 10px;
+  font-weight: 700;
+  text-align: start;
+  color: #0f172a;
+}
+
+/* ================= INPUT ================= */
+.field input,
+.field select {
+  width: 90%;
+  padding: 14px 18px;
+  border-radius: 22px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.field input::placeholder {
+  color: #94a3b8;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.35);
+  transform: translateY(-1px);
+}
+
+/* ================= ERROR ================= */
+.error-text {
+  font-size: 12px;
+  margin-left: 12px;
+  margin-top: 4px;
+  color: var(--danger);
+}
+
+.input-error {
+  border-color: var(--danger) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
+}
+
+/* ================= BUTTON ================= */
+.btn {
+  grid-column: span 2;
+  margin-top: 12px;
+  padding: 16px;
+  background: linear-gradient(135deg, #020617, #020617);
+  border: none;
+  border-radius: 22px;
+  color: #e5e7eb;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #081242;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= IMAGE ================= */
+.preview-img {
+  width: 95px;
+  margin-top: 14px;
+  border-radius: 14px;
+  border: 2px solid var(--primary);
+}
+
+/* ================= EMPTY ================= */
+.empty {
+  text-align: center;
+  font-size: 18px;
+  color: #94a3b8;
+}
+
+/* ================= TABLE ================= */
+.table-wrapper {
+  overflow-x: auto;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 18px;
+  font-size: 14px;
+  text-align: left;
+  color: var(--primary);
+  border-bottom: 1px solid #334155;
+}
+
+.table td {
+  padding: 16px;
+  font-size: 14px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.table tr {
+  transition: 0.25s ease;
+}
+
+.table tr:hover {
+  background: rgba(56, 189, 248, 0.15);
+}
+
+/* ================= ACTIONS ================= */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #020617;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.edit-btn:hover {
+  background: var(--primary-dark);
+  transform: scale(1.08);
+}
+
+.delete-btn {
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: var(--danger);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+  transform: scale(1.08);
+}
+
+/* ================= IMAGE ================= */
+.emp-img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+}
+
+/* ================= CARD GRID ================= */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.emp-card {
+  background: linear-gradient(180deg, #f1f5ff, #e0e7ff);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.45);
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.emp-card:hover {
+  transform: translateY(-12px) scale(1.01);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.75);
+}
+
+.card-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 14px;
+  border-radius: 18px;
+}
+
+.emp-card h3 {
+  margin: 10px 0;
+  color: #001b76;
+  font-size: 20px;
+}
+
+.emp-card p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #0f172a;
+}
+
+.salary {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 10px;
+  color: var(--success);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 800px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .full,
+  .btn {
+    grid-column: span 1;
+  }
+}
